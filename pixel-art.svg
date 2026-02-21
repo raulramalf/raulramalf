@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 130" width="400" height="130" style="image-rendering:pixelated">
+  <style>
+    .s1 { animation: tw 2.0s steps(1) infinite; }
+    .s2 { animation: tw 2.0s 0.6s steps(1) infinite; }
+    .s3 { animation: tw 2.0s 1.2s steps(1) infinite; }
+    @keyframes tw {
+      0%,100% { opacity:1; } 50% { opacity:0.1; }
+    }
+
+    .hero { animation: run 6s linear infinite; }
+    @keyframes run {
+      0%   { transform: translateX(-30px); }
+      100% { transform: translateX(430px); }
+    }
+
+    .leg1 { animation: leg1a 0.3s steps(1) infinite; }
+    .leg2 { animation: leg2a 0.3s steps(1) infinite; }
+    @keyframes leg1a {
+      0%,49%  { transform: translateY(0px); }
+      50%,100%{ transform: translateY(4px); }
+    }
+    @keyframes leg2a {
+      0%,49%  { transform: translateY(4px); }
+      50%,100%{ transform: translateY(0px); }
+    }
+
+    .coin1 { animation: coinMove 6s 0.5s linear infinite; }
+    .coin2 { animation: coinMove 6s 2.0s linear infinite; }
+    .coin3 { animation: coinMove 6s 3.5s linear infinite; }
+    @keyframes coinMove {
+      0%   { transform: translateX(-60px); opacity:1; }
+      100% { transform: translateX(430px); opacity:1; }
+    }
+
+    .enemy { animation: patrol 3s ease-in-out infinite alternate; }
+    @keyframes patrol {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(50px); }
+    }
+    .enemy2 { animation: patrol2 4s ease-in-out infinite alternate; }
+    @keyframes patrol2 {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-45px); }
+    }
+
+    .score { animation: scorePulse 3s steps(1) infinite; }
+    @keyframes scorePulse {
+      0%,89%,100% { opacity:1; } 90% { opacity:0.3; }
+    }
+
+    .cloud1 { animation: drift 22s linear infinite; }
+    .cloud2 { animation: drift 30s 8s linear infinite; }
+    @keyframes drift {
+      0%   { transform: translateX(-60px); }
+      100% { transform: translateX(460px); }
+    }
+  </style>
+
+  <!-- Sky -->
+  <rect width="400" height="130" fill="#1a1a2e"/>
+
+  <!-- Stars -->
+  <rect x="10"  y="8"  width="2" height="2" fill="#fff" class="s1"/>
+  <rect x="45"  y="15" width="2" height="2" fill="#fff" class="s2"/>
+  <rect x="80"  y="6"  width="2" height="2" fill="#fff" class="s3"/>
+  <rect x="115" y="12" width="2" height="2" fill="#fff" class="s1"/>
+  <rect x="165" y="5"  width="2" height="2" fill="#fff" class="s2"/>
+  <rect x="205" y="18" width="2" height="2" fill="#fff" class="s3"/>
+  <rect x="255" y="8"  width="2" height="2" fill="#fff" class="s1"/>
+  <rect x="305" y="13" width="2" height="2" fill="#fff" class="s2"/>
+  <rect x="345" y="4"  width="2" height="2" fill="#fff" class="s3"/>
+  <rect x="378" y="11" width="2" height="2" fill="#fff" class="s1"/>
+
+  <!-- Moon -->
+  <rect x="358" y="8" width="18" height="18" rx="9" fill="#e8e8b0"/>
+  <rect x="363" y="11" width="4" height="4" fill="#d0d08a"/>
+  <rect x="369" y="18" width="3" height="3" fill="#d0d08a"/>
+
+  <!-- Clouds -->
+  <g class="cloud1">
+    <rect x="20" y="28" width="32" height="6" fill="#2a2a4a" rx="3"/>
+    <rect x="26" y="22" width="20" height="8" fill="#2a2a4a" rx="3"/>
+  </g>
+  <g class="cloud2">
+    <rect x="170" y="32" width="28" height="6" fill="#2a2a4a" rx="3"/>
+    <rect x="176" y="26" width="16" height="8" fill="#2a2a4a" rx="3"/>
+  </g>
+
+  <!-- HUD -->
+  <text x="8" y="14" font-family="monospace" font-size="8" fill="#FFD700" class="score">SCORE: 08420</text>
+  <text x="8" y="24" font-family="monospace" font-size="8" fill="#ff6b6b">♥ ♥ ♥</text>
+
+  <!-- Ground -->
+  <rect x="0" y="104" width="400" height="4" fill="#8B6240"/>
+  <rect x="0" y="108" width="400" height="8" fill="#5c3d2e"/>
+  <!-- Ground tile marks -->
+  <rect x="16"  y="104" width="2" height="4" fill="#7a5230"/>
+  <rect x="48"  y="104" width="2" height="4" fill="#7a5230"/>
+  <rect x="80"  y="104" width="2" height="4" fill="#7a5230"/>
+  <rect x="112" y="104" width="2" height="4" fill="#7a5230"/>
+  <rect x="144" y="104" width="2" height="4" fill="#7a5230"/>
+  <rect x="176" y="104" width="2" height="4" fill="#7a5230"/>
+  <rect x="208" y="104" width="2" height="4" fill="#7a5230"/>
+  <rect x="240" y="104" width="2" height="4" fill="#7a5230"/>
+  <rect x="272" y="104" width="2" height="4" fill="#7a5230"/>
+  <rect x="304" y="104" width="2" height="4" fill="#7a5230"/>
+  <rect x="336" y="104" width="2" height="4" fill="#7a5230"/>
+  <rect x="368" y="104" width="2" height="4" fill="#7a5230"/>
+
+  <!-- Platforms -->
+  <rect x="70"  y="78" width="50" height="4" fill="#8B6240"/>
+  <rect x="70"  y="82" width="50" height="4" fill="#5c3d2e"/>
+  <rect x="195" y="66" width="50" height="4" fill="#8B6240"/>
+  <rect x="195" y="70" width="50" height="4" fill="#5c3d2e"/>
+  <rect x="305" y="78" width="50" height="4" fill="#8B6240"/>
+  <rect x="305" y="82" width="50" height="4" fill="#5c3d2e"/>
+
+  <!-- Question blocks -->
+  <rect x="125" y="52" width="14" height="14" fill="#c8860a" rx="1"/>
+  <rect x="126" y="53" width="12" height="12" fill="#f0c040" rx="1"/>
+  <rect x="127" y="54" width="10" height="5"  fill="#e6a817"/>
+  <text x="129" y="64" font-family="monospace" font-size="9" fill="#fff" font-weight="bold">?</text>
+
+  <rect x="250" y="42" width="14" height="14" fill="#c8860a" rx="1"/>
+  <rect x="251" y="43" width="12" height="12" fill="#f0c040" rx="1"/>
+  <rect x="252" y="44" width="10" height="5"  fill="#e6a817"/>
+  <text x="254" y="54" font-family="monospace" font-size="9" fill="#fff" font-weight="bold">?</text>
+
+  <!-- Pipe right -->
+  <rect x="356" y="84" width="26" height="20" fill="#219a52"/>
+  <rect x="354" y="82" width="30" height="6"  fill="#2ecc71"/>
+  <rect x="358" y="88" width="22" height="16" fill="#1a7a40"/>
+
+  <!-- Coins (move with hero) -->
+  <g class="coin1">
+    <rect x="60" y="88" width="8" height="10" fill="#FFD700" rx="2"/>
+    <rect x="62" y="90" width="4" height="6"  fill="#e6b800" rx="1"/>
+  </g>
+  <g class="coin2">
+    <rect x="180" y="88" width="8" height="10" fill="#FFD700" rx="2"/>
+    <rect x="182" y="90" width="4" height="6"  fill="#e6b800" rx="1"/>
+  </g>
+  <g class="coin3">
+    <rect x="300" y="88" width="8" height="10" fill="#FFD700" rx="2"/>
+    <rect x="302" y="90" width="4" height="6"  fill="#e6b800" rx="1"/>
+  </g>
+
+  <!-- Enemy 1 (Goomba) patrols ground -->
+  <g class="enemy" transform="translate(90,0)">
+    <rect x="1"  y="86" width="16" height="9"  fill="#A0522D" rx="2"/>
+    <rect x="0"  y="93" width="18" height="11" fill="#8B4513" rx="2"/>
+    <rect x="3"  y="88" width="3"  height="3"  fill="#fff"/>
+    <rect x="12" y="88" width="3"  height="3"  fill="#fff"/>
+    <rect x="4"  y="89" width="2"  height="2"  fill="#111"/>
+    <rect x="13" y="89" width="2"  height="2"  fill="#111"/>
+    <rect x="2"  y="92" width="5"  height="2"  fill="#6b3000"/>
+    <rect x="11" y="92" width="5"  height="2"  fill="#6b3000"/>
+    <rect x="0"  y="102" width="7" height="4"  fill="#5c3000" rx="1"/>
+    <rect x="11" y="102" width="7" height="4"  fill="#5c3000" rx="1"/>
+  </g>
+
+  <!-- Enemy 2 (green shell) patrols platform -->
+  <g class="enemy2" transform="translate(310,0)">
+    <rect x="1"  y="68" width="18" height="10" fill="#2ecc71" rx="3"/>
+    <rect x="0"  y="70" width="20" height="8"  fill="#27ae60" rx="3"/>
+    <rect x="3"  y="69" width="5"  height="4"  fill="#fff"/>
+    <rect x="12" y="69" width="5"  height="4"  fill="#fff"/>
+    <rect x="4"  y="70" width="3"  height="3"  fill="#111"/>
+    <rect x="13" y="70" width="3"  height="3"  fill="#111"/>
+    <rect x="2"  y="76" width="7"  height="4"  fill="#219a52" rx="1"/>
+    <rect x="11" y="76" width="7"  height="4"  fill="#219a52" rx="1"/>
+  </g>
+
+  <!-- Hero (runs across screen) -->
+  <g class="hero">
+    <!-- Cap -->
+    <rect x="0"  y="80" width="14" height="4" fill="#e74c3c" rx="1"/>
+    <rect x="-2" y="82" width="18" height="2" fill="#e74c3c"/>
+    <!-- Hair / face -->
+    <rect x="0"  y="84" width="14" height="10" fill="#f0c27f"/>
+    <!-- Eyes -->
+    <rect x="2"  y="86" width="3" height="2" fill="#111"/>
+    <rect x="9"  y="86" width="3" height="2" fill="#111"/>
+    <!-- Mustache -->
+    <rect x="2"  y="90" width="10" height="2" fill="#5c3d2e"/>
+    <!-- Body -->
+    <rect x="0"  y="94" width="14" height="10" fill="#3498db"/>
+    <!-- Arms -->
+    <rect x="-4" y="95" width="5"  height="5"  fill="#3498db"/>
+    <rect x="13" y="95" width="5"  height="5"  fill="#3498db"/>
+    <!-- Overalls straps -->
+    <rect x="2"  y="94" width="4"  height="2"  fill="#2980b9"/>
+    <rect x="8"  y="94" width="4"  height="2"  fill="#2980b9"/>
+    <!-- Legs -->
+    <g class="leg1">
+      <rect x="1"  y="104" width="5" height="6" fill="#e74c3c"/>
+      <rect x="0"  y="108" width="7" height="4" fill="#1a1a2e" rx="1"/>
+    </g>
+    <g class="leg2">
+      <rect x="8"  y="104" width="5" height="6" fill="#e74c3c"/>
+      <rect x="7"  y="108" width="7" height="4" fill="#1a1a2e" rx="1"/>
+    </g>
+  </g>
+
+  <!-- Footer name -->
+  <text x="8"   y="126" font-family="monospace" font-size="9"  fill="#FFD700">RAUL.DEV</text>
+  <text x="285" y="126" font-family="monospace" font-size="7"  fill="#8b949e">Web Developer Student</text>
+</svg>
