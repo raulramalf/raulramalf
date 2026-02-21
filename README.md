@@ -1,6 +1,6 @@
 # Hi, I'm Raul 👋
 
-> *Web Developer Student · Frontend & Backend · Seville, Spain*
+> *Web Developer Student · Frontend & Backend · Seville, Spain 🇪🇸*
 
 I'm passionate about building clean and functional web experiences. Currently learning and growing, always looking to collaborate on innovative projects.
 
@@ -32,11 +32,8 @@ I'm passionate about building clean and functional web experiences. Currently le
 
 ---
 
-## 📊 GitHub Stats
-
-<p align="left">
-  <img height="150" src="https://github-readme-stats.vercel.app/api?username=raulramalf&show_icons=true&theme=default&hide_border=true&count_private=true" />
-  <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=raulramalf&layout=compact&theme=default&hide_border=true" />
+<p align="center">
+  <img src="./pixel-art.svg" alt="Pixel Art Animation" width="400"/>
 </p>
 
 ---
