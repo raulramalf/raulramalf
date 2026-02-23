@@ -32,12 +32,6 @@ I'm passionate about building clean and functional web experiences. Currently le
 
 ---
 
-<p align="center">
-  <img src="./pixel-art.svg" alt="Pixel Art Animation" width="400"/>
-</p>
-
----
-
 ## 🤝 Connect with me
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/raul-ram%C3%ADrez-alfaro-539433275)
